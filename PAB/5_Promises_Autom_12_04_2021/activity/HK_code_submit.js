@@ -11,7 +11,8 @@ browserOpenPromise
     .then(function (browser) {
         let alltabsArrpromise = browser.pages();
         return alltabsArrpromise;
-    }).then(function (allTabsArr) {
+    })
+    .then(function (allTabsArr) {
         cTab = allTabsArr[0];
         let visitLoginpagePromise = cTab.goto("https://www.hackerrank.com/auth/login");
         return visitLoginpagePromise;
